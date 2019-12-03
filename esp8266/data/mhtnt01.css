@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;  
+}
+
+.temp {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.time {
+    text-align: center;
+    font-size: x-large;
+}
+
+.high_low {
+    width: 100%;
+}
+
+.low_temp {
+    text-align: left;
+    font-size: small;
+}
+
+.high_temp {
+    text-align: right;
+    font-size: small;
+}

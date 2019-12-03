@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="/mhtnt01.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['line']});
+      google.charts.setOnLoadCallback(drawChart);
+    </script>
+    <title>Time n Temp</title>
+    <link rel="stylesheet" href="mhtnt01.css">
+  </head>
+  <body>
+    <div>
+      <hr/>
+      <div class="time"><span id="time">Time</span></div>
+      <hr/>
+      <div class="temp"><span id="tempF">TempF</span></div>
+      <div class="time">(<span id="tempC">TempC</span>)</div>
+      <hr/>
+      <div id="history_chart" style="width: 100%; height: 100%"></div>
+    </div>
+    <table class="high_low">
+      <tr>
+	<td class="low_temp" id="low_temp"></td>
+	<td class="high_temp" id="high_temp"></td>
+      </tr>
+    </table>
+    <script>
+      set_time();
+      set_temp();
+      set_history();
+      setInterval(set_temp, 5000);
+      setInterval(set_time, 10000);
+      setInterval(set_history, 60000);
+    </script>
+  </body>
+</html>
